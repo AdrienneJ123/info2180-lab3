@@ -47,4 +47,16 @@ square.addEventListener('mouseout', () => {
 });
 
   });
+  const newGameButton = document.querySelector('.btn');
+newGameButton.addEventListener('click', () => {
+  gameState.fill(null);
+  squares.forEach(square => {
+    square.textContent = '';
+    square.classList.remove('X', 'O');
+  });
+  statusDiv.textContent = 'Move your mouse over a square and click to play an X or an O.';
+  statusDiv.classList.remove('you-won');
+  currentPlayer = 'X';
+});
+//Add fumctionality so when "new game" button is clicked, the winner display feature is removed and the original feature is replaced
 });
